@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "note": "Canonical index of Nuthatch nests. The website (nuthatch-indexer.com/nests) builds from this file.",
   "nests": [
     {
       "id": "erc20-token",
@@ -19,8 +20,7 @@
       "summary": "Any ERC-20 \u2014 transfers, holders and supply. Generated straight from the contract address; no repo to clone.",
       "events": "Transfer, Approval",
       "command": "nuthatch init 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 --chain mainnet",
-      "note": "Generic decode \u2014 works for any token today. The example above is USDC.",
-      "repo": "generic"
+      "note": "Generic decode \u2014 works for any token today. The example above is USDC."
     },
     {
       "id": "erc721-nft",
@@ -40,15 +40,14 @@
       "summary": "Any NFT collection \u2014 ownership and full transfer history, resolved from the collection address.",
       "events": "Transfer, ApprovalForAll, TransferSingle, TransferBatch",
       "command": "nuthatch init 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D --chain mainnet",
-      "note": "Generic decode \u2014 works for any collection today. The example above is BAYC.",
-      "repo": "generic"
+      "note": "Generic decode \u2014 works for any collection today. The example above is BAYC."
     },
     {
       "id": "graph-network",
       "name": "Graph Network (Horizon)",
       "category": "Graph infra",
       "tier": 0,
-      "status": "building",
+      "status": "available",
       "chains": [
         "Arbitrum"
       ],
@@ -56,8 +55,8 @@
       "complexity": "medium",
       "summary": "The Graph's own protocol state \u2014 staking provisions, allocations, delegation, curation and rewards. The data every indexer pays GRT to read today.",
       "events": "ProvisionCreated, AllocationCreated, AllocationClosed, TokensDelegated, Signalled, HorizonRewardsAssigned",
-      "note": "horizon-nest is live on Arbitrum; consolidating into a published graph-network-nest (RFC-0011).",
-      "repo": "https://github.com/nuthatch-indexer/horizon-nest"
+      "note": "Covers the Horizon staking/service surface today (operators, allocations, delegations, rewards); expanding to full network-subgraph parity \u2014 Indexer Directory, Curation, Epochs (RFC-0011).",
+      "repo": "https://github.com/nuthatch-indexer/graph-network-nest"
     },
     {
       "id": "ebo",
@@ -72,8 +71,7 @@
       "complexity": "medium",
       "summary": "The per-epoch canonical block for every indexed chain \u2014 the reference all indexers use to close multichain allocations consistently.",
       "events": "DataEdge calldata payloads (EventfulDataEdge emits on Arbitrum)",
-      "note": "Needs the calldata decoder (the node-independent RFC-0014 slice).",
-      "repo": null
+      "note": "Needs the calldata decoder (the node-independent RFC-0014 slice)."
     },
     {
       "id": "qos-reo",
@@ -88,8 +86,7 @@
       "complexity": "high",
       "summary": "Indexer quality-of-service and reward eligibility \u2014 off-chain gateway telemetry posted on-chain.",
       "events": "Rewards Eligibility Oracle postings (GIP-0079)",
-      "note": "On-chain shape still consolidating post-Horizon \u2014 a watch-and-follow target.",
-      "repo": null
+      "note": "On-chain shape still consolidating post-Horizon \u2014 a watch-and-follow target."
     },
     {
       "id": "uniswap-v3",
@@ -107,8 +104,7 @@
       "factory": true,
       "complexity": "high",
       "summary": "Concentrated-liquidity DEX \u2014 pools, swaps, positions, TVL and fees. The showcase for factory discovery: one nest tracks every pool.",
-      "events": "PoolCreated, Swap, Mint, Burn, Collect, Flash",
-      "repo": null
+      "events": "PoolCreated, Swap, Mint, Burn, Collect, Flash"
     },
     {
       "id": "aave-v3",
@@ -126,8 +122,7 @@
       "factory": false,
       "complexity": "medium",
       "summary": "The lending flagship \u2014 supplies, borrows, repayments, liquidations and rates across 20+ chains.",
-      "events": "Supply, Borrow, Repay, LiquidationCall, ReserveUsedAsCollateral",
-      "repo": null
+      "events": "Supply, Borrow, Repay, LiquidationCall, ReserveUsedAsCollateral"
     },
     {
       "id": "ens",
@@ -141,8 +136,7 @@
       "factory": false,
       "complexity": "medium",
       "summary": "The archetypal name-service index \u2014 registrations, expiries, resolvers and records across the registry and registrar.",
-      "events": "NameRegistered, NameRenewed, Transfer, NewResolver",
-      "repo": null
+      "events": "NameRegistered, NameRenewed, Transfer, NewResolver"
     },
     {
       "id": "uniswap-v2",
@@ -160,8 +154,7 @@
       "factory": true,
       "complexity": "medium",
       "summary": "Constant-product AMM \u2014 the simpler Uniswap, and the template Sushiswap reuses. One nest, two protocols.",
-      "events": "PairCreated, Swap, Mint, Burn, Sync",
-      "repo": null
+      "events": "PairCreated, Swap, Mint, Burn, Sync"
     },
     {
       "id": "compound",
@@ -178,8 +171,7 @@
       "factory": false,
       "complexity": "medium",
       "summary": "cToken and Comet money-markets \u2014 supply, borrow, repayment and liquidation.",
-      "events": "Mint, Redeem, Borrow, RepayBorrow, LiquidateBorrow",
-      "repo": null
+      "events": "Mint, Redeem, Borrow, RepayBorrow, LiquidateBorrow"
     },
     {
       "id": "lido",
@@ -193,8 +185,7 @@
       "factory": false,
       "complexity": "medium",
       "summary": "The liquid-staking leader \u2014 stETH/wstETH deposits, withdrawals, rebases and oracle reporting.",
-      "events": "Submitted, Transfer, TokenRebased, WithdrawalRequested",
-      "repo": null
+      "events": "Submitted, Transfer, TokenRebased, WithdrawalRequested"
     },
     {
       "id": "seaport",
@@ -212,8 +203,7 @@
       "factory": false,
       "complexity": "medium",
       "summary": "The protocol behind the largest NFT marketplace \u2014 order fulfilment and cancellation.",
-      "events": "OrderFulfilled, OrderCancelled, CounterIncremented",
-      "repo": null
+      "events": "OrderFulfilled, OrderCancelled, CounterIncremented"
     },
     {
       "id": "curve",
@@ -230,8 +220,7 @@
       "factory": true,
       "complexity": "high",
       "summary": "StableSwap AMM \u2014 pools, exchanges and liquidity with invariant pricing.",
-      "events": "TokenExchange, AddLiquidity, RemoveLiquidity",
-      "repo": null
+      "events": "TokenExchange, AddLiquidity, RemoveLiquidity"
     },
     {
       "id": "eigenlayer",
@@ -245,8 +234,7 @@
       "factory": false,
       "complexity": "medium",
       "summary": "Restaking \u2014 operator registration, staker delegation, deposits and withdrawals.",
-      "events": "OperatorRegistered, StakerDelegated, Deposit, WithdrawalQueued",
-      "repo": null
+      "events": "OperatorRegistered, StakerDelegated, Deposit, WithdrawalQueued"
     },
     {
       "id": "gmx",
@@ -260,8 +248,7 @@
       "factory": false,
       "complexity": "high",
       "summary": "Perpetuals \u2014 position lifecycle, PnL and liquidations.",
-      "events": "IncreasePosition, DecreasePosition, LiquidatePosition",
-      "repo": null
+      "events": "IncreasePosition, DecreasePosition, LiquidatePosition"
     },
     {
       "id": "makerdao",
@@ -275,8 +262,7 @@
       "factory": false,
       "complexity": "high",
       "summary": "The DAI/USDS CDP engine \u2014 vaults, collateral and liquidations.",
-      "events": "vat.frob, vat.grab, Bark (Dog)",
-      "repo": null
+      "events": "vat.frob, vat.grab, Bark (Dog)"
     }
   ]
 }
