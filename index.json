@@ -11,9 +11,7 @@
       "chains": [
         "Ethereum",
         "Arbitrum",
-        "Optimism",
-        "Base",
-        "Polygon"
+        "Base"
       ],
       "factory": false,
       "complexity": "trivial",
@@ -31,9 +29,7 @@
       "chains": [
         "Ethereum",
         "Arbitrum",
-        "Optimism",
-        "Base",
-        "Polygon"
+        "Base"
       ],
       "factory": false,
       "complexity": "low",
