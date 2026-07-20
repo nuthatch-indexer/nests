@@ -89,18 +89,20 @@
       "name": "Uniswap V3",
       "category": "DEX",
       "tier": 1,
-      "status": "planned",
+      "status": "available",
       "chains": [
-        "Ethereum",
         "Arbitrum",
+        "Ethereum",
         "Optimism",
         "Base",
         "Polygon"
       ],
       "factory": true,
       "complexity": "high",
-      "summary": "Concentrated-liquidity DEX \u2014 pools, swaps, positions, TVL and fees. The showcase for factory discovery: one nest tracks every pool.",
-      "events": "PoolCreated, Swap, Mint, Burn, Collect, Flash"
+      "summary": "Concentrated-liquidity DEX \u2014 every pool discovered from the factory, with swaps, prices, and gross volume. The showcase for factory discovery: one rule tracks every pool, no per-pool config.",
+      "events": "PoolCreated, Swap, Mint, Burn, Collect, Flash",
+      "note": "Configured for Arbitrum; the factory address is identical on every chain, so re-pointing is a two-line edit. Token decimals / USD pricing need a vendored token list (the declarative core makes no contract calls).",
+      "repo": "https://github.com/nuthatch-indexer/uniswap-v3"
     },
     {
       "id": "aave-v3",
