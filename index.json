@@ -39,7 +39,7 @@
       "note": "Generic decode \u2014 works for any collection today. The example above is BAYC."
     },
     {
-      "id": "graph-network",
+      "id": "horizon",
       "name": "Graph Network (Horizon)",
       "category": "Graph infra",
       "tier": 0,
@@ -51,8 +51,8 @@
       "complexity": "medium",
       "summary": "The Graph's own protocol state \u2014 staking provisions, allocations, delegation, curation and rewards. The data every indexer pays GRT to read today.",
       "events": "ProvisionCreated, AllocationCreated, AllocationClosed, TokensDelegated, Signalled, HorizonRewardsAssigned",
-      "note": "Covers the Horizon staking/service surface today (operators, allocations, delegations, rewards); expanding to full network-subgraph parity \u2014 Indexer Directory, Curation, Epochs (RFC-0011).",
-      "repo": "https://github.com/nuthatch-indexer/graph-network-nest"
+      "note": "Covers the Horizon staking/service surface today (operators, allocations, delegations, rewards); extending to the full network-subgraph surface \u2014 Indexer Directory, Curation, Epochs (RFC-0011).",
+      "repo": "https://github.com/nuthatch-indexer/horizon-nest"
     },
     {
       "id": "ebo",

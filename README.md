@@ -11,7 +11,7 @@ A nest is consumed with `nuthatch init --from <repo-url>`, or generated straight
 
 | Nest | Category | Tier | Status | Get it |
 |------|----------|:----:|--------|--------|
-| **Graph Network (Horizon)** | Graph infra | 0 · beachhead | 🟢 available | [`init --from`](https://github.com/nuthatch-indexer/graph-network-nest) · [graph-network-nest](https://github.com/nuthatch-indexer/graph-network-nest) |
+| **Graph Network (Horizon)** | Graph infra | 0 · beachhead | 🟢 available | [`init --from`](https://github.com/nuthatch-indexer/horizon-nest) · [horizon-nest](https://github.com/nuthatch-indexer/horizon-nest) |
 | **ERC-20 token** | Token | 1 | 🟢 available | `init 0xAddr` (generic) |
 | **ERC-721 / ERC-1155 NFT** | NFT | 1 | 🟢 available | `init 0xAddr` (generic) |
 | **Epoch Block Oracle** | Graph infra | 0 · beachhead | ⚪ planned | — |
@@ -36,4 +36,4 @@ A nest is consumed with `nuthatch init --from <repo-url>`, or generated straight
 
 ## Publishing a nest
 
-A nest is self-contained — `nuthatch.toml`, vendored `abis/`, and its `views/` / `checks/`. Publishing one is a `git push` of its repo to this org; then add it to `index.json` (the site and this README follow). See [`graph-network-nest`](https://github.com/nuthatch-indexer/graph-network-nest) or [`horizon-nest`](https://github.com/nuthatch-indexer/horizon-nest) for the shape.
+A nest is self-contained — `nuthatch.toml`, vendored `abis/`, and its `views/` / `checks/`. Publishing one is a `git push` of its repo to this org; then add it to `index.json` (the site and this README follow). See [`horizon-nest`](https://github.com/nuthatch-indexer/horizon-nest) for the shape.
