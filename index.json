@@ -40,7 +40,7 @@
     },
     {
       "id": "horizon",
-      "name": "Graph Network (Horizon)",
+      "name": "Graph Horizon",
       "category": "Graph infra",
       "tier": 0,
       "status": "available",
