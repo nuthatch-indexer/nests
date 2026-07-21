@@ -11,7 +11,7 @@ A nest is consumed with `nuthatch init --from <repo-url>`, or generated straight
 
 | Nest | Category | Tier | Status | Get it |
 |------|----------|:----:|--------|--------|
-| **Graph Network (Horizon)** | Graph infra | 0 · beachhead | 🟢 available | [`init --from`](https://github.com/nuthatch-indexer/horizon-nest) · [horizon-nest](https://github.com/nuthatch-indexer/horizon-nest) |
+| **Graph Horizon** | Graph infra | 0 · beachhead | 🟢 available | [`init --from`](https://github.com/nuthatch-indexer/horizon-nest) · [horizon-nest](https://github.com/nuthatch-indexer/horizon-nest) |
 | **ERC-20 token** | Token | 1 | 🟢 available | `init 0xAddr` (generic) |
 | **ERC-721 / ERC-1155 NFT** | NFT | 1 | 🟢 available | `init 0xAddr` (generic) |
 | **Epoch Block Oracle** | Graph infra | 0 · beachhead | ⚪ planned | — |
